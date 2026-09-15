@@ -80,7 +80,7 @@ async function leaveAReviewIfItMatters()
         const daSpinFloorVariation = (1.0 - spinFloorVariation) + (Math.random() * spinFloorVariation * 2);
         const daSpinFloor = spinFloor * daSpinFloorVariation;
         newImg.style.bottom = `${daSpinFloor}em`;
-        newImg.style.zIndex = daSpinFloor * 10;
+        newImg.style.zIndex = 100 - Math.round(daSpinFloor * 100);
         newImg.style.transformOrigin = "bottom center";
         dreemurrResidence.appendChild(newImg);
 
